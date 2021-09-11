@@ -69,6 +69,8 @@ img {
 }
 .header-list .link.current {
   color: var(--accent-color);
+  border-bottom: solid 4px var(--accent-color);
+  border-radius: 2px;
 }
 .header-link {
   display: block;
@@ -79,6 +81,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #212121;
+  transition: color 500ms linear;
 }
 
 .header-right {
@@ -107,8 +110,8 @@ img {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
   color: #757575;
+  transition: color 500ms linear;
 }
 .header-navigation {
   display: flex;
@@ -164,6 +167,7 @@ h1 {
   color: #ffffff;
   background-color: var(--accent-color);
   padding: 10px 32px 10px 32px;
+  transition: background-color 500ms linear;
 }
 .btn:hover,
 .btn:focus {
@@ -242,6 +246,7 @@ h1 {
 }
 
 .work-item {
+  position: relative;
   width: 370px;
 }
 
@@ -259,6 +264,27 @@ h1 {
   letter-spacing: 0.03em;
   color: var(--main-title-color);
 }
+
+.work-box {
+  margin: 0px;
+
+  position: absolute;
+
+  width: 100%;
+  height: 70px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  padding-top: 27px;
+  left: 0;
+  bottom: 0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 /*-----COMMAND-----*/
 .command-section {
   background-color: #f5f4fa;
@@ -327,6 +353,7 @@ h1 {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  transition: background-color 700ms linear;
 }
 
 .socials-item:not(:last-child) {
@@ -334,6 +361,7 @@ h1 {
 }
 .socials-icon {
   fill: #afb1b8;
+  transition: fill 700ms linear;
 }
 .socials-link:focus .socials-icon,
 .socials-link:hover .socials-icon {
@@ -427,6 +455,8 @@ h3 {
   background-color: #f5f4fa;
   border: currentColor;
   border-radius: 4px;
+  transition: color 800ms linear, background-color 800ms linear,
+    box-shadow 800ms linear;
 }
 
 .btn-item:hover,
@@ -447,6 +477,21 @@ h3 {
   margin-right: 30px;
   margin-bottom: 30px;
 }
+
+.works-hover {
+  position: relative;
+  width: 100%;
+}
+
+.works-hover-text {
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  position: absolute;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+}
+
 .works-item:nth-child(3n) {
   margin-right: 0px;
 }
@@ -478,6 +523,7 @@ h3 {
 
 .works-link {
   display: block;
+  transition: box-shadow 700ms linear;
 }
 .works-link:hover,
 .works-link:focus {
@@ -510,6 +556,7 @@ h3 {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+  transition: border-color 500ms linear;
 }
 
 .clients-item:hover .clients-icon,
@@ -524,6 +571,7 @@ h3 {
 
 .clients-icon {
   fill: #afb1b8;
+  transition: fill 500ms linear;
 }
 
 .clients-item:not(:last-child) {
