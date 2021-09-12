@@ -23,7 +23,10 @@
         </a>
     
         <ul class="header-list list">
-            <li class="header-item"><a  href="index.html" class="header-link link current">Студия</a></li>
+            <li class="header-item"><a  href="index.html" class="header-link link current">Студия</a>
+            <div class="header-line current">
+
+            </div></li>
             <li class="header-item"><a  href="portfolio.html" class="header-link link">Портфолио</a></li>
             <li class="header-item"><a  href="" class="header-link link">Контакты</a></li>
             
@@ -78,7 +81,7 @@
                 Эффективные решения для вашего бизнеса
             </h1>
             
-            <button class="btn" type="button">Заказать услугу</button>
+            <button class="btn" type="button" data-modal-open>Заказать услугу</button>
             </div>
         </section>
     
@@ -423,7 +426,20 @@
     </div>
     </div>
 </footer>
-  
-  
+  <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+          <button type="button" class="btn-open" data-modal-close>
+          
+           <svg class="icon-close" width="30" height="36">
+            
+                <use href="./img/sprite.svg#icon-close"> </use>
+            
+            </svg>
+            
+           
+          </button>
+      </div>
+  </div>
+<script src="./js/modal.js"></script>
 </body>
 </html>
